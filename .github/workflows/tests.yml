@@ -1,0 +1,35 @@
+name: Portfolio tests
+
+on:
+  push:
+    branches:
+      - main
+      - coding-projects
+      - quant-projects
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Python dependencies
+        run: python -m pip install "pandas>=2.0,<3" "matplotlib>=3.7,<4"
+      - name: Test coding projects
+        run: |
+          if [ -d tests ]; then
+            python -m unittest discover -s tests -v
+          fi
+      - name: Test financial data pipeline
+        run: |
+          if [ -d financial-data-pipeline/tests ]; then
+            python -m unittest discover -s financial-data-pipeline/tests -v
+          fi
+      - name: Test backtester
+        run: |
+          if [ -d quant-backtester/tests ]; then
+            python -m unittest discover -s quant-backtester/tests -v
+          fi
