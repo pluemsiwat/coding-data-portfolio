@@ -1,34 +1,41 @@
-# Coding & Quantitative Engineering Portfolio
+# Coding & Quant Engineering Portfolio
 
-A collection of small, practical projects using Python, SQL, and data analysis tools. The projects cover general programming foundations and introductory quantitative finance engineering.
+Python and SQL projects exploring data engineering, quantitative finance, and practical problem-solving.
 
-## Quantitative finance and engineering
+This portfolio brings together two introductory quant projects and four smaller programming exercises. My interests include working with datasets, building reliable tools, and understanding how code can support financial research.
 
-| Project | Tools | Overview |
+## Quant engineering projects
+
+| Project | Technologies | Focus |
 | --- | --- | --- |
-| [Financial Data Pipeline](financial-data-pipeline/) | Python, pandas, SQLite | Validates daily market-price data, stores it in SQLite, and calculates returns. |
-| [Moving-Average Strategy Backtester](quant-backtester/) | Python, pandas, Matplotlib | Tests a basic trading signal and compares simulated performance with a buy-and-hold benchmark. |
+| [Financial Data Pipeline](financial-data-pipeline/) | Python, pandas, SQLite | Validates price records, stores them in a database, and calculates daily returns. |
+| [Moving-Average Backtester](quant-backtester/) | Python, pandas, Matplotlib | Tests a simple trend-following signal and compares simulated results with buy-and-hold. |
 
-## Other coding and data projects
+Both projects include reproducible sample data, setup instructions, and automated tests. The pipeline also supports optional historical data retrieval.
 
-| Project | Tools | Overview |
+## Other programming projects
+
+| Project | Technologies | Focus |
 | --- | --- | --- |
-| [Student Grade Tracker](grade-tracker/) | Python | Calculates weighted assignment averages and summarizes results. |
-| [Study Habits Analysis](study-survey/) | Python, pandas, Matplotlib | Cleans fictional survey data and generates descriptive charts. |
-| [Library Database](library-sql/) | SQL, SQLite | Models borrowing records and explores data with SQL queries. |
-| [Expense Dashboard](expense-dashboard/) | Python, Matplotlib | Compares sample monthly expenses with category budgets. |
+| [Grade Tracker](grade-tracker/) | Python | Weighted grade calculations |
+| [Study Habits Analysis](study-survey/) | Python, pandas, Matplotlib | Data cleaning and visualization |
+| [Library Database](library-sql/) | SQL, SQLite | Relational databases and queries |
+| [Expense Dashboard](expense-dashboard/) | Python, Matplotlib | Budget summaries and charts |
 
-## Browse by category
+## Relevant experience
 
-- [Coding projects branch](https://github.com/pluemsiwat/coding-data-portfolio/tree/coding-projects): the four introductory coding/data projects
-- [Quant projects branch](https://github.com/pluemsiwat/coding-data-portfolio/tree/quant-projects): the financial data pipeline and strategy backtester
-- **Main branch (this page):** all six projects together
+- **AI and machine learning:** Built an image-recognition model with an NVIDIA Jetson Nano as part of a hands-on AI program.
+- **Data engineering internship:** Worked with SQL queries and database analysis for school information systems at Green Moons Company Limited.
 
-These branches are alternate collections for browsing. Each project also has its own folder so you don't need to switch branches to explore everything.
+These experiences are described here for context; supporting certificates and the original AI project are maintained separately from the code in this repository.
 
-## How to run the projects
+## Repository organization
 
-Each folder contains a README with setup instructions, dependencies, and sample usage. Python 3.10+ is recommended for the quant projects. Run the projects' automated checks using:
+- [`main`](../../tree/main): all six projects
+- [`quant-projects`](../../tree/quant-projects): financial data pipeline and backtester
+- [`coding-projects`](../../tree/coding-projects): four introductory coding projects
+
+Each project folder has its own README with instructions. To run the available tests from the repository root:
 
 ```bash
 python -m pip install "pandas>=2.0,<3" "matplotlib>=3.7,<4"
@@ -37,10 +44,8 @@ python -m unittest discover -s financial-data-pipeline/tests -v
 python -m unittest discover -s quant-backtester/tests -v
 ```
 
-## Project notes
+## Notes
 
-These are **AI-assisted demonstration projects** made for practice and further development, not a record of independently written past work. Data in the included demos is fictional. Historical market-data import is optional in the pipeline, and the strategy backtest is for educational research, not investment advice.
+The code in this repository consists of **AI-assisted learning and demonstration projects**. The example datasets are fictional, and the backtester is for educational analysis rather than live trading. I plan to extend these projects through hands-on experimentation and documented changes.
 
-Related experience, documented separately: an NVIDIA Jetson Nano object-recognition project and a data-engineering internship involving SQL and school information systems.
-
-Licensed under the [MIT License](LICENSE).
+[MIT License](LICENSE)
