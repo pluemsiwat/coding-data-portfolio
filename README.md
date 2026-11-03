@@ -1,25 +1,30 @@
-# Beginner Coding & Data Portfolio
+# Coding & Data Projects
 
-Four small, working **demonstration projects** created as a starting point for practice and personalization. All sample data are fictional. These are **not** evidence of historical work or independently completed accomplishments.
+A collection of practical projects exploring Python programming, SQL databases, data analysis, and visualization. Each project focuses on a real-world type of problem, from tracking academic performance to organizing data and presenting useful insights.
 
-| Project | Tools | Purpose |
+## Projects
+
+| Project | Technologies | Overview |
 | --- | --- | --- |
-| [Grade Tracker](grade-tracker/) | Python | Calculate weighted averages for assignments |
-| [Study Survey](study-survey/) | Python, pandas, Matplotlib | Clean synthetic survey data and generate charts |
-| [Library SQL](library-sql/) | SQLite | Design linked tables and run analytical queries |
-| [Expense Dashboard](expense-dashboard/) | Python, Matplotlib | Compare fictional expenses and monthly budgets |
+| [Student Grade Tracker](grade-tracker/) | Python | Calculates weighted assignment averages and summarizes grades by subject. |
+| [Study Habits Data Analysis](study-survey/) | Python, pandas, Matplotlib | Cleans a sample survey dataset, summarizes responses, and creates charts. |
+| [Library Database](library-sql/) | SQL, SQLite | Models borrowing records and uses SQL queries to explore library activity. |
+| [Personal Expense Dashboard](expense-dashboard/) | Python, Matplotlib | Compares sample spending with category budgets and generates visual summaries. |
 
-## Get started
-Use Python 3.9+ or SQLite. Open each project's README for instructions. For chart projects, install the local `requirements.txt` first. Generated images and reports are created in each project's `output/` directory when the scripts run.
+## Getting started
 
-## Test
-Install dependencies for the two chart projects, then run:
+Open any project folder to find its source code, instructions, and sample data. The Python projects use Python 3.9 or newer. Projects requiring additional packages include their own `requirements.txt` files.
+
+## Running tests
+
+After installing the dependencies for the visualization projects, run:
 
 ```bash
 python -m unittest discover -s tests -v
 ```
 
-## Portfolio notes
-These are starter demonstrations built with AI assistance. Run and modify them, then document what **you** implemented, changed, and learned before presenting them as independent achievements. No real survey participants or private financial records are used.
+## Project notes
 
-MIT License. See [LICENSE](LICENSE).
+These are learning-oriented demonstration projects created with AI assistance and fictional sample data. They provide a foundation for further experimentation, customization, and documentation of personal contributions.
+
+Licensed under the [MIT License](LICENSE).
