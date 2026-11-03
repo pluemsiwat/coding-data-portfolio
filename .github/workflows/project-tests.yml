@@ -1,0 +1,29 @@
+name: Check project tests
+
+on:
+  push:
+    branches:
+      - feature/data-pipeline
+      - feature/backtester
+  workflow_dispatch:
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: python -m pip install "pandas>=2.0,<3" "matplotlib>=3.7,<4"
+      - name: Run financial pipeline tests (when present)
+        run: |
+          if [ -d financial-data-pipeline/tests ]; then
+            python -m unittest discover -s financial-data-pipeline/tests -v
+          fi
+      - name: Run backtester tests (when present)
+        run: |
+          if [ -d quant-backtester/tests ]; then
+            python -m unittest discover -s quant-backtester/tests -v
+          fi
